@@ -13,39 +13,53 @@
         }
 
         body {
-            background-color: rgb(22, 22, 67);
-            color: white;
+            width: 100%;
+            background-color: rgb(253, 255, 154);
+            color: black;
+            /* justify-self: center; */
+        }
+
+        form {
             justify-self: center;
+        }
+        form div{
+            margin: 10px;
         }
     </style>
 </head>
 
 <body>
-
-
-    <form>
+    <form target="_blank">
         <div>
             <h1>Registration Form</h1>
         </div>
-        <label for="fname">First name: &nbsp; </label>
-        <input type="text" name="fname" id="fname" placeholder="Enter your first name here" required>
-        <br><br>
-        <label for="lname">Last name:&nbsp; </label>
-        <input type="text" name="lname" id="lname" placeholder="Enter your last name here" required>
-        <br><br>
-        <label for="email">Email id:&nbsp; </label>
-        <input type="email" name="email" id="email" placeholder="youremail@gmail.com" required>
-        <br><br>
-        <label for="phone">Phone:&nbsp; </label>
-        <input type="tel" name="phone" id="phone">
-        <br><br>
+        <div>
+            <label for="fname">First name: &nbsp; </label>
+            <input type="text" name="fname" id="fname" placeholder="Enter your first name here" required>
+        </div>
+        <!-- <br><br> -->
+        <div>
+            <label for="lname">Last name:&nbsp; </label>
+            <input type="text" name="lname" id="lname" placeholder="Enter your last name here" required>
+        </div>
+        <!-- <br><br> -->
+        <div>
+            <label for="email">Email id:&nbsp; </label>
+            <input type="email" name="email" id="email" placeholder="youremail@gmail.com" required>
+        </div>
+        <div>
+            <label for="phone">Phone:&nbsp; </label>
+            <input type="tel" name="phone" id="phone">
+        </div>
+        <!-- <br><br> -->
+        <!-- <br><br> -->
 
         <label for="sex">Sex:&nbsp;</label>
-        <input type="radio" id="sex" name="sex">
+        <input type="radio" id="male" name="sex">
         <label for="male">Male</label>
-        <input type="radio" id="sex" name="sex">
+        <input type="radio" id="female" name="sex">
         <label for="female">Female</label>
-        <input type="radio" id="sex" name="sex">
+        <input type="radio" id="other" name="sex">
         <label for="other">Others</label>
         <br><br>
         <label for="dob">Date of birth:&nbsp; </label>
@@ -69,8 +83,8 @@
             placeholder="H no./ Street XYZ, Locality, City,cState,cCountry" required>
         <br><br>
 
-        <!-- <input type="submit"> -->
-        <a href="submissionsuccessful.html"><input type="submit"></a>
+        <input id="demo" onclick="window.location.href ='submissionsuccessful.html';" type="submit">
+        <!-- <input type="submit"></a> -->
         <input type="reset">
         <br><br>
     </form>
