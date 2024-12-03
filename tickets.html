@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Booking - Dharohar 2024</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #02006a;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            width: 70%; 
+            max-width: 900px;
+            /* height: 100%; */
+            padding: 40px;
+            background-color: #02006a;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .container div{
+            margin: 5px;
+            padding: 5px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            color: #ffffff;
+
+        }
+
+        .form-container {
+            /* height: 80%; */
+            /* padding: 20px; */
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            width: 100%; 
+            height: auto;
+            /* max-width: 900px; */
+            /* height: 100%; */
+            padding: 30px;
+            align-items: center;
+            
+        }
+
+        .ticket-form .form-group {
+            margin-bottom: 20px;
+            
+        }
+
+        .ticket-form label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+            
+        }
+
+        .ticket-form input, .ticket-form select {
+            width: 100%;
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+            margin-bottom: 30px;
+        }
+
+        .ticket-form input:focus, .ticket-form select:focus {
+            border-color: #007BFF;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            font-size: 1.2rem;
+            color: #fff;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #f9f9f9;
+        }
+
+        .footer a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Book Your Tickets for धरोहर'24</h1>
+        </header>
+
+        <div class="form-container">
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email">
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+                </div>
+                
+                <div class="form-group">
+                    <label for="event">Select Event:</label>
+                    <select id="event" name="event" required>
+                        <option value="" disabled selected>Select Event</option>
+                        <option value="music">Music Concert (350/-)</option>
+                        <option value="dance">Dance Performance (400/-)</option>
+                        <option value="comedy">Comedy Show (300/-)</option>
+                        <option value="workshop">Workshop (200/-)</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="tickets">Number of Tickets:</label>
+                    <input type="number" id="tickets" name="tickets" min="1" max="10" required placeholder="Enter number of tickets">
+                </div>
+                
+                <div class="form-group">
+                    <button type="submit" class="submit-btn">Book Tickets</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="footer">
+            <p>For more information,<a href="contact.html"> Contact us.</a> <br>
+            Click here to go back<a href="D_home.html"> HOME</a></p>
+        </div>
+    </div>
+</body>
+</html>

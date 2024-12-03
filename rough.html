@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dharohar - Rough</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(22, 22, 67);
+            overflow-x: hidden;
+        }
+
+        main {
+            width: 100%;
+            height: auto;
+        }
+
+        nav {
+            width: 100%;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            background-color: #12122f;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ffd700;
+        }
+
+        a:link,
+        a:visited {
+            color: white;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: yellow;
+            text-decoration: underline;
+        }
+
+        .boxes {
+            width: auto;
+            height: auto;
+            padding: 0 20px;
+            text-align: center;
+            color: white;
+        }
+
+        #home-section {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: white;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .hover-text {
+            font-size: 70px;
+            font-weight: bold;
+            color: #ffd700;
+            cursor: pointer;
+            text-align: center;
+            animation: pulse 2s infinite;
+        }
+
+        .wave {
+            position: absolute;
+            width: 200%;
+            height: 12em;
+            border-radius: 1000% 1000% 0 0;
+            background: rgba(109, 88, 194, 0.8);
+            animation: wave 12s linear infinite;
+            bottom: 0;
+            left: 0;
+            opacity: 0.8;
+        }
+
+        .wave:nth-of-type(2) {
+            animation: wave 15s reverse infinite;
+            opacity: 0.6;
+            bottom: -1em;
+        }
+
+        .wave:nth-of-type(3) {
+            animation: wave 18s reverse infinite;
+            opacity: 0.4;
+            bottom: -2em;
+        }
+
+        @keyframes wave {
+            0% {
+                transform: translateX(0);
+            }
+
+            50% {
+                transform: translateX(-50%);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        article {
+            margin-top: 100px;
+            width: 80%;
+            position: relative;
+            margin: 0 auto;
+            top: 100px;
+            color: white;
+        }
+
+        .tagline {
+            font-size: 30px;
+            font-weight: bold;
+            color: white;
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .para1,
+        .para2,
+        .para3 {
+            width: 100%;
+            display: flex;
+        }
+
+        article p {
+            font-size: 25px;
+            width: 80%;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .para2 {
+            justify-content: flex-end;
+            text-align: right;
+        }
+
+
+
+        footer {
+            background-color: #080831;
+        }
+
+        .cont {
+            width: 100%;
+            padding: 70px 30px 20px;
+        }
+
+        .icons {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .icons a {
+            text-decoration: none;
+            padding: 10px;
+            background-color: rgb(255, 255, 255);
+            margin: 10px;
+            border-radius: 50%;
+
+        }
+
+        .icons a i {
+            font-size: 2em;
+            color: rgb(17, 0, 255);
+            opacity: 0.9;
+        }
+
+        .icons a j {
+            font-size: 2em;
+            color: rgb(17, 159, 247);
+            opacity: 0.9;
+        }
+
+        .icons a k {
+            font-size: 2em;
+            color: rgb(237, 0, 245);
+            opacity: 0.9;
+        }
+
+        .icons a l {
+            font-size: 2em;
+            color: rgb(84, 84, 76);
+            opacity: 0.9;
+        }
+
+        .icons a n {
+            font-size: 2em;
+            color: rgb(255, 0, 0);
+            opacity: 0.9;
+        }
+
+        .icons a:hover i {
+            color: rgb(138, 157, 255);
+            transition: 0.1s;
+        }
+
+        .icons a:hover j {
+            color: rgb(133, 196, 249);
+            transition: 0.1s;
+        }
+
+        .icons a:hover k {
+            color: rgb(234, 171, 245);
+            transition: 0.1s;
+        }
+
+        .icons a:hover l {
+            color: rgb(145, 146, 137);
+            transition: 0.1s;
+        }
+
+        .icons a:hover n {
+            color: rgb(249, 133, 133);
+            transition: 0.1s;
+        }
+
+        .footerNav {
+            margin: 35px;
+
+        }
+
+        .footerNav ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+
+
+        }
+
+        .footerNav ul li a {
+            color: rgb(255, 255, 255);
+
+            margin: 20px;
+            text-decoration: none;
+            font-size: 1.3em;
+            opacity: 100%;
+
+        }
+
+        .footerNav ul li a:hover {
+            opacity: 0.3;
+            transition: 0.1s;
+
+        }
+
+        .footerBottom {
+            background-color: rgb(0, 0, 0);
+            padding: 20px;
+            text-align: center;
+
+
+        }
+
+        .footerBottom {
+            color: rgb(152, 156, 160);
+        }
+
+        .designer {
+            opacity: 70%;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: 400;
+            margin: 0px 5px;
+        }
+
+        @media (max-width: 700px) {
+            .footerNav ul {
+                flex-direction: column;
+            }
+
+            .footerNav ul li {
+                width: 100%;
+                text-align: center;
+                margin: 10px;
+            }
+
+            .icons a {
+                padding: 8px;
+                margin: 4px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <nav>
+            <a href="college fest.html"><img src="Dharohar logo cropped.jpg" alt="Dharohar Logo" width="120"></a>
+            <a href="D_home.html">Home</a>
+            <a href="Dharohar_about.html">About Us</a>
+            <a href="tickets.html">Get Tickets</a>
+            <a href="#">Refund Policy</a>
+            <a href="contact-us.html">Contact Us</a>
+        </nav>
+
+        <div id="home-section">
+            <div class="hover-text">ध &nbsp;&nbsp;रो &nbsp;&nbsp;ह &nbsp;&nbsp;र <br><br></div>
+
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="tagline">Unite, Celebrate, Create</div>
+        </div>
+
+        <article id="about_us">
+            <h2
+                style="width: 100%; background-color: rgba(54, 54, 66, 0.938); color: white;text-align: center; font-size: 50px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; margin-bottom: 5px;">
+                IT'S GO TIME! WELCOME TO धरोहर 2024!</h2>
+
+            <div class="para1">
+                <div>
+                    <img src="Dharohar logo cropped.jpg" alt="Dharohar Logo" width="350px" height="250px">
+                </div>
+                <div>
+                    <p>
+                        <b>Dharohar</b> is an exciting three-day festival at ABES Engineering College, celebrating
+                        culture, creativity, and
+                        innovation. Organized by students, it blends technical skills with artistic expression,
+                        attracting participants from
+                        across the country for a memorable experience.
+                    </p>
+                </div>
+            </div>
+            <div class="para2">
+                <div>
+                    <p>The festival features thrilling attractions like a Ferris wheel and roller coaster, alongside
+                        interactive games and
+                        competitions. A celebrity guest adds extra excitement, while sponsors provide prizes and
+                        goodies, ensuring plenty of fun
+                        for all attendees.
+
+                    </p>
+                </div>
+                <div>
+                    <img src="Ferris wheel.jpg" alt="Picture of a Ferris wheel" width="350px" height="250px">
+                </div>
+
+            </div>
+            <div class="para3">
+                <div>
+                    <img src="performance.jpg" alt="Crowd enjoying a performance" width="350px" height="250px">
+                </div>
+                <div>
+                    <p>At its core,<b>Dharohar</b> showcases vibrant cultural performances, including dance, music, and
+                        DJ acts. It's a platform
+                        for students to showcase their talents, connect with peers, and celebrate the spirit of student
+                        life.
+                    </p>
+                </div>
+            </div>
+
+        </article>
+        <!-- The dance performance at Dharohar, a vibrant cultural fest, showcases mesmerizing traditional and contemporary
+    styles. Energetic choreography, colorful costumes, and rhythmic music create an electrifying atmosphere, celebrating
+    cultural heritage and creativity, leaving the audience captivated by the artistry and passion on display. -->
+
+        <!-- The magic show at Dharohar captivates audiences with mind-bending illusions and mesmerizing tricks. Skilled 
+    magicians perform awe-inspiring feats, blending mystery and entertainment. With stunning visuals and surprise
+    elements, the show leaves spectators spellbound, evoking wonder and amazement throughout.-->
+
+        <!-- The music show at Dharohar features soulful performances across various genres, from classical to contemporary.
+    Talented musicians create an enchanting atmosphere with their melodic rhythms, captivating the audience. The show
+    celebrates diverse musical traditions, leaving everyone immersed in the magic of sound. -->
+
+        <!-- The handicraft workshops at Dharohar offer hands-on experiences in traditional crafts. Participants explore
+    techniques like pottery, weaving, and painting, guided by skilled artisans. These workshops celebrate creativity and
+    craftsmanship, allowing attendees to create unique pieces while learning about cultural heritage. -->
+
+        <footer>
+            <div class="cont">
+                <div class="icons">
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href="">
+                        <j class="fa-brands fa-twitter"></j>
+                    </a>
+                    <a href="">
+                        <k class="fa-brands fa-instagram"></k>
+                    </a>
+                    <a href="">
+                        <l class="fa-brands fa-google-plus"></l>
+                    </a>
+                    <a href="">
+                        <n class="fa-brands fa-youtube"></n>
+                    </a>
+
+
+                </div>
+                <div class="footerNav">
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">News</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Contact Us</a></li>
+                        <li><a href="">Our Team</a></li>
+                    </ul>
+
+                </div>
+            </div>
+            <div class="footerBottom">
+                <p>Copyright &copy2024;Designed by <span class="designer">TEAM DHAROHAR</span></p>
+
+            </div>
+        </footer>
+
+
+    </main>
+</body>
+
+</html>
