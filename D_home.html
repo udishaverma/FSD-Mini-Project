@@ -15,6 +15,10 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             background-color: rgb(22, 22, 67);
             overflow-x: hidden;
@@ -94,7 +98,7 @@
             width: 200%;
             height: 12em;
             border-radius: 1000% 1000% 0 0;
-            background: rgba(109, 88, 194, 0.8);
+            background: rgba(90, 71, 165, 0.8);
             animation: wave 12s linear infinite;
             bottom: 0;
             left: 0;
@@ -188,7 +192,7 @@
             border-bottom: 1px solid rgb(71, 67, 90);
         }
 
-        article div{
+        article div {
             width: 100%;
             display: flex;
             gap: 10px;
@@ -373,11 +377,12 @@
 <body>
     <main>
         <nav>
-            <a href="rough.html"><img src="Dharohar_logo_cropped-removebg-preview.png" alt="Dharohar Logo" width="120"></a>
+            <a href="rough.html"><img src="Dharohar_logo_cropped-removebg-preview.png" alt="Dharohar Logo"
+                    width="120"></a>
             <a href="D_home.html">Home</a>
             <!-- <a href="Dharohar_about.html" target="_self">About Us</a> -->
-             <a href="#about_us">About Us</a>
-            <a href="tickets.html">Get Tickets</a>
+            <a href="#about_us">About Us</a>
+            <a href="tickets.html" target="_blank">Get Tickets</a>
             <a href="refund_policy.html" target="_blank">Refund Policy</a>
             <a href="contact-us.html" target="_blank">Contact Us</a>
         </nav>
@@ -394,7 +399,10 @@
         <div class="relativeposition">
 
             <article id="about_us">
-                <h1>IT'S GO TIME! WELCOME TO धरोहर 2024!</h1>
+                <div>
+                    <h1>IT'S GO TIME! WELCOME TO धरोहर 2024!</h1>
+                </div>
+
                 <div class="para">
                     <div>
                         <img src="Dharohar logo cropped.jpg" alt="Dharohar Logo" width="350px" height="250px">
