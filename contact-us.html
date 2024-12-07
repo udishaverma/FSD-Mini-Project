@@ -9,122 +9,191 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>Contact Us - Dharohar 2024</title>
   <style>
+    /* MAIN BODY */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+    }
 
     body {
       background-color: rgb(22, 22, 67);
-      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      overflow-x: hidden;
       color: white;
+      font-family: Arial, sans-serif;
     }
 
+    /* NAV BAR */
     nav {
       width: 100%;
       height: 80px;
       display: flex;
       align-items: center;
-      justify-content: space-around;
+      justify-content: space-between;
       background-color: #12122f;
       position: fixed;
       top: 0;
-      z-index: 1000;
+      z-index: 1;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      font-family: 'Times New Roman', Times, serif;
+      padding: 0 30px;
+      transition: background-color 0.3s ease;
     }
 
-    nav a {
+    nav img {
+      width: 120px;
+    }
+
+    .nav-bar {
+      display: flex;
+    }
+
+    .nav-bar a {
       color: #fff;
       text-decoration: none;
+      font-family: 'Times New Roman', Times, serif;
       font-size: 1.2rem;
-      transition: color 0.3s ease;
+      margin: 0 15px;
+      padding: 5px 10px;
+      position: relative;
+      transition: color 0.3s ease, background-color 0.3s ease;
     }
 
-    nav a:hover {
-      color: #ffd700;
-      text-decoration: underline;
-      font-size: larger;
+    .nav-bar a::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 3px;
+      background: #ffd700;
+      transition: width 0.3s ease-in-out;
     }
 
-    .contact-container {
+    .nav-bar a:hover::before {
+      width: 100%;
+    }
+
+    /* MAIN CONTENT */
+    .main-content {
+      padding-top: 120px;
+      flex: 1;
+      width: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
-      /* padding-top: 80px; */
-      margin-top: 90px;
-      position: relative;
     }
 
-    .contact-form {
-      background-color: rgba(54, 54, 66, 0.8);
-      padding: 30px;
+    .container {
+      padding: 40px;
+      background-color: rgba(54, 54, 66, 0.9);
       border-radius: 10px;
-      width: 80%;
-      max-width: 600px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      max-width: 700px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      margin-top: 10px;
+      margin-bottom: 30px;
+      text-align: left;
+      border: 1px solid #2b2b3d;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      overflow: hidden;
     }
 
-    h2 {
+    header {
       text-align: center;
-      margin-bottom: 20px;
+    }
+
+    header h1 {
       font-size: 2.5rem;
+      font-family: 'Times New Roman', Times, serif;
       color: #ffd700;
+      margin-bottom: 30px;
     }
 
     .form-group {
-      margin-bottom: 20px;
+      margin-bottom: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
     .form-group label {
-      display: block;
-      margin-bottom: 5px;
+      width: 35%;
+      text-align: left;
       font-size: 1.1rem;
+      color: #fff;
+      font-weight: 500;
     }
 
     .form-group input,
     .form-group textarea {
-      width: 100%;
-      padding: 10px;
+      width: 60%;
+      padding: 12px;
       font-size: 1rem;
+      border: 1px solid #ccc;
       border-radius: 5px;
-      border: none;
-      background-color: #f1f1f1;
-      color: #333;
+      background-color: #2a2a2a;
+      color: #fff;
+      outline: none;
+      transition: border-color 0.3s ease;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: #ffd700;
     }
 
     .form-group textarea {
       resize: vertical;
-      min-height: 150px;
+      height: 120px;
     }
 
-    .form-group button {
+    .submit-btn {
       width: 100%;
-      padding: 12px;
+      padding: 15px;
       font-size: 1.2rem;
       background-color: #ffd700;
-      color: #12122f;
+      color: black;
       border: none;
       border-radius: 5px;
       cursor: pointer;
-      transition: background-color 0.3s ease;
+      font-weight: 600;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
 
-    .form-group button:hover {
-      background-color: #ffcc00;
+    .submit-btn:hover {
+      background-color: #0056b3;
+      color: white;
     }
 
+
+
+    /* -----------------------------------footer---------------------------------------------------- */
 
     footer {
-      background-color: #1e1d1d;
+      background-color: #090b3f;
+      font-family: 'Times New Roman', Times, serif;
     }
 
     .cont {
       width: 100%;
       padding: 70px 30px 20px;
+      display: flex;
+    }
+
+    .box1 {
+      width: 400px;
     }
 
     .icons {
@@ -143,31 +212,31 @@
     }
 
     .icons a i {
-      font-size: 2em;
+      font-size: 1em;
       color: rgb(17, 0, 255);
       opacity: 0.9;
     }
 
     .icons a j {
-      font-size: 2em;
+      font-size: 1em;
       color: rgb(17, 159, 247);
       opacity: 0.9;
     }
 
     .icons a k {
-      font-size: 2em;
+      font-size: 1em;
       color: rgb(237, 0, 245);
       opacity: 0.9;
     }
 
     .icons a l {
-      font-size: 2em;
+      font-size: 1em;
       color: rgb(84, 84, 76);
       opacity: 0.9;
     }
 
     .icons a n {
-      font-size: 2em;
+      font-size: 1em;
       color: rgb(255, 0, 0);
       opacity: 0.9;
     }
@@ -199,43 +268,71 @@
 
     .footerNav {
       margin: 35px;
+    }
 
+    .box2 {
+      display: flex;
+      gap: 15px;
+    }
+
+    .student {
+      width: 250px;
+      color: white;
+      background-color: rgba(31, 15, 109, 0.823);
+      padding: 5px;
+      border: 3px solid rgba(12, 6, 65, 0.871);
+      box-shadow: 4px 4px 2px rgba(101, 105, 168, 0.871);
+      line-height: 1.5;
+    }
+
+    .student h3 {
+      color: rgb(255, 0, 212);
+      font-style: italic;
+    }
+
+    .student a:link,
+    a:visited {
+      color: #fff;
+    }
+
+    .student a:hover {
+      color: #ffd700;
+    }
+
+    .name {
+      font-family: 'Times New Roman', Times, serif;
     }
 
     .footerNav ul {
       display: flex;
       justify-content: center;
       list-style-type: none;
-
-
     }
 
     .footerNav ul li a {
       color: rgb(255, 255, 255);
-
       margin: 20px;
       text-decoration: none;
-      font-size: 1.3em;
+      font-size: 1em;
       opacity: 100%;
 
     }
 
     .footerNav ul li a:hover {
-      opacity: 0.3;
+      /* opacity: 0.3; */
       transition: 0.1s;
-
+      color: rgba(250, 218, 10, 0.816);
+      text-decoration: underline;
     }
 
     .footerBottom {
       background-color: rgb(0, 0, 0);
       padding: 20px;
       text-align: center;
-
-
-    }
-
-    .footerBottom {
       color: rgb(152, 156, 160);
+      opacity: 70%;
+      display: flex;
+      gap: 750px;
     }
 
     .designer {
@@ -267,47 +364,51 @@
 
 <body>
   <nav>
-    <a href="D_home.html"><img src="Dharohar_logo_cropped-removebg-preview.png" alt="Dharohar Logo" width="120"></a>
-    <a href="D_home.html">Home</a>
-    <a href="Dharohar_about.html">About Us</a>
-    <a href="tickets.html">Get Tickets</a>
-    <a href="refund-policy.html">Refund Policy</a>
-    <a href="contact-us.html">Contact Us</a>
+    <a href="D1_home.html"><img src="Dharohar_logo_cropped-removebg-preview.png" alt="Dharohar Logo"></a>
+    <div class="nav-bar">
+      <a href="D1_home.html">Home</a>
+      <a href="#about_us">About Us</a>
+      <a href="#">Our Sponsors</a>
+      <a href="BookTickets.html" target="_blank">Get Tickets</a>
+      <a href="refund_policy.html" target="_blank">Refund Policy</a>
+      <a href="#">FAQs</a>
+      <a href="ContactUs.html" target="_blank">Contact Us</a>
+    </div>
   </nav>
 
-  <div class="relativeposition">
-
-    <div class="contact-container">
-      <div class="contact-form">
-        <h2>Contact Us</h2>
-        <form>
-          <div class="form-group">
-            <label for="name">Full Name</label>
-            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
-          </div>
-          <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email" required>
-          </div>
-          <div class="form-group">
-            <label for="subject">Subject</label>
-            <input type="text" id="subject" name="subject" placeholder="Enter subject" maxlength="50" required>
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" placeholder="Write your message" maxlength="200" required></textarea>
-          </div>
-          <div class="form-group">
-            <button type="submit">Submit</button>
-          </div>
-        </form>
-      </div>
+  <div class="main-content">
+    <div class="container">
+      <header>
+        <h1>Contact Us</h1>
+      </header>
+      <form action="submit_form.php" method="POST">
+        <div class="form-group">
+          <label for="name">Full Name:</label>
+          <input type="text" id="name" name="name" required placeholder="Enter your full name">
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" name="email" required placeholder="Enter your email">
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject:</label>
+          <input type="text" id="subject" name="subject" required placeholder="Enter subject">
+        </div>
+        <div class="form-group">
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required placeholder="Write your message"></textarea>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="submit-btn">Submit</button>
+        </div>
+      </form>
     </div>
+  </div>
 
 
-
-    <footer>
-      <div class="cont">
+  <footer>
+    <div class="cont">
+      <div class="box1">
         <div class="icons">
           <a href="">
             <i class="fa-brands fa-facebook"></i>
@@ -326,28 +427,69 @@
           </a>
         </div>
 
-
         <div class="footerNav">
           <ul>
-            <li><a href="D_home.html">Home</a></li>
-            <li><a href="Dharohar_about.html">About</a></li>
-            <li><a href="contact-us.html">Contact Us</a></li>
+            <li><a href="">Home</a></li>
+            <li><a href="">News</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact Us</a></li>
             <li><a href="">Our Team</a></li>
           </ul>
+
         </div>
       </div>
-      <div class="footerBottom">
-        <p>Copyright &copy2024;Designed by <span class="designer">TEAM DHAROHAR</span></p>
 
+      <div class="box2">
+        <div class="student">
+          <h3>EVENT COORDINATOR</h3>
+          <div class="name">Ashish Jaiswal</div>
+          <div class="email">
+            <a href="mailto:ashishjaiswal@gmail.com"><i class="fa fa-envelope"></i>
+              ashishjaiswal@gmail.com</a> <br>
+          </div>
+          <div class="mobile"><a href="tel:+91630606098863"><i class="fa fa-phone"></i>+916306098863</a></div>
+        </div>
+
+        <div class="student">
+          <h3>EVENT COORDINATOR</h3>
+          <div class="name">Lavish Patel</div>
+          <div class="email">
+            <a href="mailto:lavishpatel@gmail.com"><i class="fa fa-envelope"></i>
+              lavishpatel@gmail.com</a> <br>
+          </div>
+          <div class="mobile"><a href="tel:+916307967770"><i class="fa fa-phone"></i>+916307967770</a></div>
+        </div>
+
+        <div class="student">
+          <h3>EVENT COORDINATOR</h3>
+          <div class="name">Udisha Verma</div>
+          <div class="email">
+            <a href="mailto:udishaverma2@gmail.com"><i class="fa fa-envelope"></i>
+              udishaverma2@gmail.com</a> <br>
+          </div>
+          <div class="mobile"><a href="tel:+918287465191"><i class="fa fa-phone"></i>+918287465191</a></div>
+        </div>
+
+        <div class="student">
+          <h3>EVENT COORDINATOR</h3>
+          <div class="name">Vidushi Srivastava</div>
+          <div class="email">
+            <a href="mailto:vidushisrivastava@gmail.com"><i class="fa fa-envelope"></i>
+              vidushisrivastava@gmail.com</a> <br>
+          </div>
+          <div class="mobile"><a href="tel:+918800147574"><i class="fa fa-phone"></i>+918800147574</a></div>
+        </div>
       </div>
-
-    </footer>
-
-
-
-
-
-  </div>
+    </div>
+    <div class="footerBottom">
+      <div class="footerBottomLeft">
+        <span>&copy;2024<span class="designer">TEAM DHAROHAR</span>ALL RIGHTS RESERVED</span>
+      </div>
+      <div class="footerBottomRight">
+        <span>ABES ENGINEERING COLLEGE, GHAZIABAD</span>
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>
