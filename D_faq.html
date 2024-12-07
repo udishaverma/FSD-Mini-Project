@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequently Asked Questions</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            /* height: 100%; */
+        }
+
+        body {
+            background-color: rgb(22, 22, 67);
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 100%;
+        }
+
+        /* NAV BAR */
+        nav {
+            width: 100%;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #12122f;
+            position: fixed;
+            top: 0;
+            z-index: 1;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 0 30px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav img {
+            width: 120px;
+        }
+
+        .nav-bar {
+            display: flex;
+        }
+
+        .nav-bar a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            margin: 0 15px;
+            padding: 5px 10px;
+            position: relative;
+            transition: color 0.3s ease, background-color 0.3s ease;
+        }
+
+        .nav-bar a::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 3px;
+            background: #ffd700;
+            transition: width 0.3s ease-in-out;
+        }
+
+        .nav-bar a:hover::before {
+            width: 100%;
+        }
+
+        .nav-bar a:hover {
+            color: #ffd700;
+            background-color: #1e1d1d;
+            border-radius: 5px;
+        }
+
+        .relativeposition {
+            position: relative;
+            top: 100px;
+        }
+
+        .container {
+            width: 900px;
+            height: auto;
+            background-color: rgba(54, 54, 66, 0.8);
+            border-radius: 25px;
+            justify-self: center;
+            padding: 20px;
+            color: #fff;
+            margin: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            box-shadow: 8px 8px 4px #6c6ca5;
+        }
+
+        .container h1 {
+            text-align: center;
+            color: #ffd700;
+            text-decoration: underline;
+            margin-bottom: 20px;
+            font-size: 36px;
+
+        }
+
+        .section {
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgb(225, 225, 225);
+        }
+
+        .section h3 {
+            color: #ffd700;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .section a:link,
+        a:visited {
+            color: #ffd700;
+        }
+
+        .section a:hover {
+            color: rgb(137, 168, 253);
+        }
+
+        .questions {
+            color: #e9f4fb;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .answers {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="D_home.html"><img src="Dharohar_logo_cropped-removebg-preview.png" alt="Dharohar Logo"></a>
+        <div class="nav-bar">
+            <a href="D_home.html">Home</a>
+            <a href="#about_us">About Us</a>
+            <a href="tickets.html" target="_blank">Get Tickets</a>
+            <a href="refund_policy.html" target="_blank">Refund Policy</a>
+            <a href="D_faq.html">FAQs</a>
+            <a href="#sponsor">Our Sponsors</a>
+            <a href="contact-us.html" target="_blank">Contact Us</a>
+        </div>
+    </nav>
+    <div class="relativeposition">
+        <div class="container">
+            <h1>Frequently Asked Questions</h1>
+            <div class="section">
+                <h3>1. General Information</h3>
+                <div class="questions">What is Dharohar?</div>
+                <div class="answers">Dharohar is our annual college fest celebrating cultural heritage, talent, and
+                    innovation. It features a variety of events, competitions, and performances by renowned artists.
+                </div>
+                <div class="questions">When and where is Dharohar happening?</div>
+                <div class="answers">Dharohar will be held on 24 December, 2024 at ABES Engineering College,Ghaziabad.
+                    Visit our
+                    website for location details and directions.</div>
+                <div class="questions">Can non-students attend Dharohar?</div>
+                <div class="answers">Absolutely! Dharohar is open to students, alumni, and the general public.</div>
+
+            </div>
+            <div class="section">
+                <h3>2. Registration</h3>
+                <div class="questions">How do I register for Dharohar?</div>
+                <div class="answers">You can register on our official website by filling out the registration form
+                    available under the "Get Tickets" tab.</div>
+                <div class="questions">Do I need to register separately for individual events?</div>
+                <div class="answers">Yes, each event has its own registration process. Check the event details on our
+                    website for more information.
+                </div>
+                <div class="questions">Can I register on the day of the event?</div>
+                <div class="answers">While online registration is preferred, on-spot registration will be available for
+                    certain events, subject to availability.</div>
+
+            </div>
+
+            <div class="section">
+                <h3>3. Competitions and Events</h3>
+                <div class="questions">What types of events are organized at Dharohar?</div>
+                <div class="answers">Dharohar features cultural performances, workshops, exciting games,
+                    food festivals, music concerts, and much more!</div>
+                <div class="questions">Can I participate in multiple events?</div>
+                <div class="answers">Yes, you can participate in multiple events, provided the schedules do not overlap.
+                </div>
+                <div class="questions">How do I find the schedule for the fest?</div>
+                <div class="answers">The complete schedule is available on our website under the “Schedule” section.
+                </div>
+            </div>
+
+            <div class="section">
+                <h3>4. Accommodations and Facilities</h3>
+                <div class="questions">Is parking available at the venue?</div>
+                <div class="answers">Yes, parking facilities are available at the venue. Follow the signage for
+                    designated parking areas.</div>
+                <div class="questions">Will food be available at the venue?</div>
+                <div class="answers">Yes, a variety of food stalls will be set up at the fest, offering cuisines to suit
+                    all tastes.</div>
+
+            </div>
+            <div class="section">
+                <h3>5. Contact and Support</h3>
+                <div class="questions">Who can I contact for more information?</div>
+                <div class="answers">You can reach out to us at <a
+                        href="mailto:dharoharhelp@gmail.com">dharoharhelp@gmail.com</a> or call <a
+                        href="tel:+912212345678">+912212345678</a> for any queries.
+                </div>
+                <div class="questions">What should I do if I face issues with registration?</div>
+                <div class="answers">For registration issues, contact our support team at <a
+                        href="mailto:dharoharsupport@gmail.com">dharoharsupport@gmail.com</a>.</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
