@@ -224,6 +224,28 @@
             }
         }
 
+        .waviy {
+            position: relative;
+        }
+
+        .waviy span {
+            position: relative;
+            display: inline-block;
+            font-size: 20px;
+            color: #fff;
+            text-transform: uppercase;
+            animation: flip 2s infinite;
+            animation-delay: calc(.2s * var(--i))
+        }
+
+        @keyframes flip {
+
+            0%,
+            80% {
+                transform: rotateY(360deg)
+            }
+        }
+
         /* ABOUT US */
         .relativeposition {
             position: relative;
@@ -297,10 +319,10 @@
         }
 
         .slidelogo img:hover {
-            width: 180px;
-            height: 130px;
+            width: 160px;
+            height: 110px;
             transition-duration: 1s;
-            transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition: ease-in-out;
         }
 
         @keyframes scroll {
@@ -528,25 +550,45 @@
     <nav>
         <a href="D1_home.html"><img src="Dharohar_logo_cropped-removebg-preview.png" alt="Dharohar Logo"></a>
         <div class="nav-bar">
-            <a href="D_home.html">Home</a>
-            <a href="#about_us" >About Us</a>
-            <a href="tickets.html" target="_blank">Get Tickets</a>
+            <a href="D1_home.html">Home</a>
+            <a href="#about_us">About Us</a>
+            <a href="Gallary.html">Picture Gallery</a>
             <a href="#sponsor">Our Sponsors</a>
-            <a href="D_faq.html" target="_blank">FAQs</a>
+            <a href="schedule.html" target="_blank">Schedule '24</a>
+            <a href="BookTickets.html" target="_blank">Get Tickets</a>
             <a href="refund_policy.html" target="_blank">Refund Policy</a>
-            <a href="contact-us.html" target="_blank">Contact Us</a>
+            <a href="FAQ.html" target="_blank">FAQs</a>
+            <a href="ContactUs.html" target="_blank">Contact Us</a>
         </div>
     </nav>
 
     <div id="home-section">
         <div class="hover-text">ध &nbsp;&nbsp;रो &nbsp;&nbsp;ह &nbsp;&nbsp;र<br></div>
-        <!-- <div class="subheading">
-      <div class="monitor-wrapper">
-        <div class="monitor">
-          <p>Unite, Celebrate, Create | 3-Day Cultural Fest | ABES Engineering College | Fun, Festivities & More!</p>
+        <div class="waviy">
+            <span style="--i:1">U</span>
+            <span style="--i:2">n</span>
+            <span style="--i:3">i</span>
+            <span style="--i:4">t</span>
+            <span style="--i:5">e</span>
+            <span style="--i:6">, </span>
+            <span style="--i:7">C</span>
+            <span style="--i:8">e</span>
+            <span style="--i:9">l</span>
+            <span style="--i:10">e</span>
+            <span style="--i:11">b</span>
+            <span style="--i:12">r</span>
+            <span style="--i:13">a</span>
+            <span style="--i:14">t</span>
+            <span style="--i:15">e</span>
+            <span style="--i:16">, </span>
+            <span style="--i:17">C</span>
+            <span style="--i:18">r</span>
+            <span style="--i:19">e</span>
+            <span style="--i:20">a</span>
+            <span style="--i:21">t</span>
+            <span style="--i:22">e</span>
+
         </div>
-      </div>
-    </div> -->
 
         <div class="wave"></div>
         <div class="wave"></div>
@@ -719,13 +761,12 @@
                 </div>
 
                 <div class="footerNav">
-                    <ul>
-                        <li><a href="D_home.html" target="_blank">Home</a></li>
-                        <!-- <li><a href="">News</a></li> -->
-                        <li><a href="D_home.html#about_us" target="_blank">About</a></li>
-                        <li><a href="contact-us.html" target="_blank">Contact Us</a></li>
-                        <!-- <li><a href="">Our Team</a></li> -->
-                    </ul>
+                  <ul>
+                    <li><a href="D1_home.html">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="ContactUs.html">Contact Us</a></li>
+                </ul>
+
                 </div>
             </div>
 
@@ -737,7 +778,7 @@
                         <a href="mailto:ashishjaiswal@gmail.com"><i class="fa fa-envelope"></i>
                             ashishjaiswal@gmail.com</a> <br>
                     </div>
-                    <div class="mobile"><a href="tel:+91630606098863"><i class="fa fa-phone"></i>+916306098863</a></div>
+                    <div class="mobile"><a href="tel:+91630606098123"><i class="fa fa-phone"></i>+916306098123</a></div>
                 </div>
 
                 <div class="student">
@@ -747,7 +788,7 @@
                         <a href="mailto:lavishpatel@gmail.com"><i class="fa fa-envelope"></i>
                             lavishpatel@gmail.com</a> <br>
                     </div>
-                    <div class="mobile"><a href="tel:+916307967770"><i class="fa fa-phone"></i>+916307967770</a></div>
+                    <div class="mobile"><a href="tel:+916307967123"><i class="fa fa-phone"></i>+916307967123</a></div>
                 </div>
 
                 <div class="student">
@@ -755,9 +796,9 @@
                     <div class="name">Udisha Verma</div>
                     <div class="email">
                         <a href="mailto:udishaverma2@gmail.com"><i class="fa fa-envelope"></i>
-                            udishaverma2@gmail.com</a> <br>
+                            udishaverma@gmail.com</a> <br>
                     </div>
-                    <div class="mobile"><a href="tel:+918287465191"><i class="fa fa-phone"></i>+918287465191</a></div>
+                    <div class="mobile"><a href="tel:+918287465123"><i class="fa fa-phone"></i>+918287465123</a></div>
                 </div>
 
                 <div class="student">
@@ -767,7 +808,7 @@
                         <a href="mailto:vidushisrivastava@gmail.com"><i class="fa fa-envelope"></i>
                             vidushisrivastava@gmail.com</a> <br>
                     </div>
-                    <div class="mobile"><a href="tel:+918800147574"><i class="fa fa-phone"></i>+918800147574</a></div>
+                    <div class="mobile"><a href="tel:+918800147123"><i class="fa fa-phone"></i>+918800147123</a></div>
                 </div>
             </div>
         </div>
