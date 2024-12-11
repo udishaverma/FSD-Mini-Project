@@ -47,6 +47,7 @@
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       padding: 0 30px;
       transition: background-color 0.3s ease;
+      font-family: 'Times New Roman', Times, serif;
     }
 
     nav img {
@@ -55,12 +56,12 @@
 
     .nav-bar {
       display: flex;
+      float: right;
     }
 
-    .nav-bar a {
+    nav a {
       color: #fff;
       text-decoration: none;
-      font-family: 'Times New Roman', Times, serif;
       font-size: 1.2rem;
       margin: 0 15px;
       padding: 5px 10px;
@@ -68,7 +69,7 @@
       transition: color 0.3s ease, background-color 0.3s ease;
     }
 
-    .nav-bar a::before {
+    nav a::before {
       content: "";
       position: absolute;
       left: 0;
@@ -79,9 +80,69 @@
       transition: width 0.3s ease-in-out;
     }
 
-    .nav-bar a:hover::before {
+    nav a:hover::before {
       width: 100%;
     }
+
+    nav a:hover {
+      color: #ffd700;
+      background-color: #1e1d1d;
+      border-radius: 5px;
+    }
+
+    .dropbtn {
+      background-color: #341fc1;
+      color: white;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .dropdown {
+      /* position: relative; */
+      /* display: inline-block; */
+      background-color: #7a77ac;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      right: 0;
+      /* padding: 40px; */
+      width: 360px;
+      height: 700px;
+      background-color: #19182465;
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 30px;
+      width: 100%;
+      height: 10px;
+      /* margin-bottom: 10px; */
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #201251;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown:hover .dropbtn {
+      background-color: #151254;
+    }
+
+    .main-content {
+      padding-top: 120px;
+      /* to avoid navbar overlay */
+      flex: 1;
+    }
+
 
     /* MAIN CONTENT */
     .main-content {
@@ -368,14 +429,19 @@
     <div class="nav-bar">
       <a href="D_home.html" target="_blank">Home</a>
       <a href="D_home.html#about_us" target="_blank">About Us</a>
-      <a href="gallery.html" target="_blank">Picture Gallery</a>
-      <a href="D_home.html#sponsor" target="_blank">Our Sponsors</a>
-      <a href="schedule.html" target="_blank">Schedule '24</a>
+      <a href="schedule.html">Schedule '24</a>
       <a href="tickets.html" target="_blank">Get Tickets</a>
-      <a href="refund_policy.html" target="_blank">Refund Policy</a>
-      <a href="D_faq.html" target="_blank">FAQs</a>
-      <a href="contact-us.html">Contact Us</a>
-  </div>
+    </div>
+    <div class="dropdown" style="float: right;">
+      <button class="dropbtn">=</button>
+      <div class="dropdown-content">
+        <a href="gallery.html" target="_blank">Picture Gallery</a>
+        <a href="D_home.html#sponsor" target="_blank">Our Sponsors</a>
+        <a href="refund_policy.html" target="_blank">Refund Policy</a>
+        <a href="D_faq.html" target="_blank">FAQs</a>
+        <a href="contact-us.html" target="_blank">Contact Us</a>
+      </div>
+    </div>
   </nav>
 
   <div class="main-content">
@@ -421,7 +487,7 @@
           <a href="">
             <k class="fa-brands fa-instagram"></k>
           </a>
-          
+
           <a href="">
             <n class="fa-brands fa-youtube"></n>
           </a>

@@ -42,6 +42,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             padding: 0 30px;
             transition: background-color 0.3s ease;
+            font-family: 'Times New Roman', Times, serif;
         }
 
         nav img {
@@ -50,11 +51,11 @@
 
         .nav-bar {
             display: flex;
+            float: right ;
         }
 
-        .nav-bar a:link,
-        a:visited {
-            color: #fff !important;
+        nav a {
+            color: #fff;
             text-decoration: none;
             font-size: 1.2rem;
             margin: 0 15px;
@@ -63,7 +64,7 @@
             transition: color 0.3s ease, background-color 0.3s ease;
         }
 
-        .nav-bar a::before {
+        nav a::before {
             content: "";
             position: absolute;
             left: 0;
@@ -74,15 +75,63 @@
             transition: width 0.3s ease-in-out;
         }
 
-        .nav-bar a:hover::before {
+        nav a:hover::before {
             width: 100%;
         }
 
-        .nav-bar a:hover {
+        nav a:hover {
             color: #ffd700;
             background-color: #1e1d1d;
             border-radius: 5px;
         }
+
+        .dropbtn {
+            background-color: #341fc1;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropdown {
+            /* position: relative; */
+            /* display: inline-block; */
+            background-color: #7a77ac;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            /* padding: 40px; */
+            width: 360px;
+            height: 700px;
+            background-color: #19182465;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 30px;
+            width: 100%;
+            height: 10px;
+            /* margin-bottom: 10px; */
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #201251;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #151254;
+        }
+
 
         .relativeposition {
             position: relative;
@@ -117,6 +166,7 @@
             margin-bottom: 20px;
             padding-bottom: 10px;
             border-bottom: 1px solid rgb(225, 225, 225);
+            line-height: 25px;
         }
 
         .section h3 {
@@ -132,13 +182,14 @@
 
         .section a:hover {
             color: rgb(137, 168, 253);
+            margin: 20p;
         }
 
         .questions {
             color: #e9f4fb;
             font-size: 18px;
             font-weight: bold;
-            margin-bottom: 5px;
+            margin: 10px;
         }
 
         .answers {
@@ -330,15 +381,20 @@
     <nav>
         <a href="D_home.html"><img src="Dharohar_logo_cropped-removebg-preview.png" alt="Dharohar Logo"></a>
         <div class="nav-bar">
-            <a href="D_home.html" target="_blank">Home</a>
-            <a href="D_home.html#about_us" target="_blank">About Us</a>
-            <a href="gallery.html" target="_blank">Picture Gallery</a>
-            <a href="D_home.html#sponsor" target="_blank">Our Sponsors</a>
+            <a href="D_home.html">Home</a>
+            <a href="#about_us">About Us</a>
             <a href="schedule.html" target="_blank">Schedule '24</a>
             <a href="tickets.html" target="_blank">Get Tickets</a>
-            <a href="refund_policy.html" target="_blank">Refund Policy</a>
-            <a href="D_faq.html">FAQs</a>
-            <a href="contact-us.html" target="_blank">Contact Us</a>
+        </div>
+        <div class="dropdown" style="float: right;">
+            <button class="dropbtn">=</button>
+            <div class="dropdown-content">
+                <a href="gallery.html">Picture Gallery</a>
+                <a href="D_home.html#sponsor">Our Sponsors</a>
+                <a href="refund_policy.html" target="_blank">Refund Policy</a>
+                <a href="D_faq.html" target="_blank">FAQs</a>
+                <a href="contact-us.html" target="_blank">Contact Us</a>
+            </div>
         </div>
     </nav>
     <div class="relativeposition">
@@ -423,7 +479,7 @@
                         <a href="">
                             <k class="fa-brands fa-instagram"></k>
                         </a>
-                        
+
                         <a href="">
                             <n class="fa-brands fa-youtube"></n>
                         </a>
