@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Dharohar - Rough</title>
+    <title>Contact Us - Dharohar 2024</title>
     <style>
         /* MAIN BODY */
         * {
@@ -16,29 +16,21 @@
             box-sizing: border-box;
         }
 
-        html {
-            scroll-behavior: smooth;
+        html,
+        body {
             height: 100%;
+            margin: 0;
         }
 
         body {
             background-color: rgb(22, 22, 67);
-            overflow-x: hidden;
             display: flex;
             flex-direction: column;
-            min-height: 100%;
-        }
-
-        h1 {
-            width: 100%;
-            font-size: 40px;
-            background-color: rgba(54, 54, 66, 0.938);
+            justify-content: flex-start;
+            align-items: center;
+            overflow-x: hidden;
             color: white;
-            text-align: center;
-            margin-bottom: 5px;
-            margin-top: 40px;
-            border-radius: 10px;
-            box-shadow: 4px 4px 8px rgba(23, 139, 255, 0.8);
+            font-family: Arial, sans-serif;
         }
 
         /* NAV BAR */
@@ -64,17 +56,18 @@
 
         .nav-bar {
             display: flex;
-            float: right ;
+            float: right;
         }
 
         nav a {
             color: #fff;
             text-decoration: none;
-            font-size: 1.2rem;
+            font-size: 22px;
             margin: 0 15px;
             padding: 5px 10px;
             position: relative;
-            transition: color 0.3s ease, background-color 0.3s ease;
+            transition: color 0.3s ease;
+            background-color: 0.3s ease;
         }
 
         nav a::before {
@@ -99,7 +92,8 @@
         }
 
         .dropbtn {
-            background-color: #341fc1;
+            background-color: #350e5c;
+            box-shadow: 2px 2px 4px #1e1e80;
             color: white;
             padding: 16px;
             font-size: 16px;
@@ -119,12 +113,12 @@
             right: 0;
             /* padding: 40px; */
             width: 360px;
-            height: 700px;
+            height: 360px;
             background-color: #19182465;
         }
 
         .dropdown-content a {
-            color: black;
+            color: rgb(251, 248, 248);
             padding: 30px;
             width: 100%;
             height: 10px;
@@ -151,272 +145,113 @@
             flex: 1;
         }
 
-        /* CONTENT */
-        #home-section {
+
+        /* MAIN CONTENT */
+        .main-content {
+            padding-top: 120px;
+            flex: 1;
             width: 100%;
-            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
+        }
+
+        .container {
+            padding: 40px;
+            background-color: rgba(54, 54, 66, 0.9);
+            border-radius: 10px;
+            width: 100%;
+            max-width: 700px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            margin-top: 10px;
+            margin-bottom: 30px;
+            text-align: left;
+            border: 1px solid #2b2b3d;
+            display: flex;
             flex-direction: column;
-            color: white;
-            overflow: hidden;
-            position: relative;
-            -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
-        }
-
-        .hover-text {
-            font-size: 70px;
-            font-weight: bold;
-            color: #ffd700;
-            cursor: pointer;
-            text-align: center;
-            animation: pulse 2s infinite;
-        }
-
-        .wave {
-            position: absolute;
-            width: 200%;
-            height: 12em;
-            border-radius: 1000% 1000% 0 0;
-            background: rgba(90, 71, 165, 0.8);
-            animation: wave 12s linear infinite;
-            bottom: 0;
-            left: 0;
-            opacity: 0.8;
-        }
-
-        .wave:nth-of-type(2) {
-            animation: wave 15s reverse infinite;
-            opacity: 0.6;
-            bottom: -1em;
-            background-color: rgba(129, 109, 209, 0.8);
-        }
-
-        .wave:nth-of-type(3) {
-            animation: wave 18s reverse infinite;
-            opacity: 0.4;
-            bottom: -2em;
-            background-color: rgba(115, 93, 255, 0.8);
-        }
-
-        @keyframes wave {
-            0% {
-                transform: translateX(0);
-            }
-
-            50% {
-                transform: translateX(-50%);
-            }
-
-            100% {
-                transform: translateX(0);
-            }
-        }
-
-        @keyframes pulse {
-
-            0%,
-            100% {
-                transform: scale(1);
-            }
-
-            50% {
-                transform: scale(1.1);
-            }
-        }
-
-        /* SUB-HEADING */
-        .subheading {
-            position: relative;
-            width: 500px;
-            height: 60px;
-            margin: 0 auto;
-            background: #27293c;
-            border-radius: 8px;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-            overflow: hidden;
-        }
-
-        .monitor-wrapper {
-            width: 480px;
-            height: 40px;
-            background: #12132b;
-            margin: 10px auto;
-            border: 1px solid #682baf;
-            border-radius: 5px;
-            box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.4);
-            position: relative;
-            display: flex;
-            align-items: center;
             justify-content: center;
+            overflow: hidden;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         }
 
-        .monitor-wrapper .monitor p {
-            font-family: 'Courier New', Courier, monospace;
-            font-size: 1.2rem;
-            font-weight: bold;
-            position: absolute;
-            animation: move 15s infinite linear;
-            color: #f7cc35;
-            white-space: nowrap;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
-
+        header {
+            text-align: center;
         }
 
-        @keyframes move {
-            from {
-                left: 600px;
-            }
-
-            to {
-                left: -1200px;
-            }
+        header h1 {
+            font-size: 3em;
+            font-family: 'Times New Roman', Times, serif;
+            color: #ffd700;
+            margin-bottom: 30px;
         }
 
-        .waviy {
-            position: relative;
+        .form-group {
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        .waviy span {
-            position: relative;
-            display: inline-block;
+        .form-group label {
+            width: 35%;
+            text-align: left;
             font-size: 20px;
             color: #fff;
-            text-transform: uppercase;
-            animation: flip 5s infinite;
-            animation-delay: calc(.2s * var(--i));
+            font-weight: 500;
         }
 
-        @keyframes flip {
-
-            0%,
-            80% {
-                transform: rotateY(360deg)
-            }
+        .form-group input,
+        .form-group textarea {
+            width: 60%;
+            padding: 12px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #2a2a2a;
+            color: #fff;
+            outline: none;
+            transition: border-color 0.3s ease;
         }
 
-        /* ABOUT US */
-        .relativeposition {
-            position: relative;
-            z-index: 0;
-            margin: 0 auto;
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #ffd700;
         }
 
-        article {
-            margin-top: 100px;
-            width: 80%;
-            margin: 0 auto;
-            padding-bottom: 30px;
+        .form-group textarea {
+            resize: vertical;
+            height: 120px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            font-size: 1.2rem;
+            background-color: #ffd700;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #0056b3;
             color: white;
         }
 
-        .tagline {
-            font-size: 30px;
-            font-weight: bold;
-            color: white;
-            position: absolute;
-            top: 55%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
 
-
-        .image img:hover {
-            width: 360px;
-            height: 260px;
-        }
-
-        .para {
-            width: 100%;
-            display: flex;
-            align-items: center;
-            text-align: justify;
-            margin-bottom: 20px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid rgb(71, 67, 90);
-        }
-
-        article div {
-            width: 100%;
-            display: flex;
-            gap: 10px;
-            align-items: center;
-            text-align: justify;
-            margin: 10px;
-        }
-
-
-        article p {
-            font-size: 23px;
-            align-items: center;
-            justify-content: center;
-            width: 80%;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        }
-
-
-        /* --------------------SPONSORS ----------------------------*/
-        .image img {
-            border-radius: 50%;
-            transition: all 0.3s ease;
-            box-shadow: 4px 4px 8px rgba(23, 139, 255, 0.8);
-        }
-
-        .slidelogo img {
-            width: 150px;
-            height: 100px;
-        }
-
-        .slidelogo img:hover {
-            width: 160px;
-            height: 110px;
-            transition-duration: 1s;
-            transition: ease-in-out;
-        }
-
-        @keyframes scroll {
-            0% {
-                transform: translateX(0);
-            }
-
-            100% {
-                transform: translateX(calc(-250px * 6));
-            }
-        }
-
-        #sponsor {
-            align-items: center;
-            justify-content: center;
-            height: 70vh;
-            margin: auto;
-            overflow: hidden;
-            position: relative;
-            width: 100%;
-        }
-
-        #sponsor .logos {
-            padding: 150px;
-            animation: scroll 40s linear infinite;
-            display: flex;
-            width: max-content;
-        }
-
-        #sponsor .slidelogo {
-            height: 100px;
-            width: 250px;
-            margin-right: 20px;
-        }
-
-        .gold {
-            color: #ffd700;
-        }
-
-
-        /* -------------------------------------------FOOTER-------------------------------------------------------- */
+        /* -----------------------------------footer---------------------------------------------------- */
 
         footer {
             background-color: #090b3f;
+            font-family: 'Times New Roman', Times, serif;
+            width: 100%;
+            justify-content: center;
+            justify-self: center;
+            align-items: center;
+            justify-items: center;
         }
 
         .cont {
@@ -427,6 +262,7 @@
 
         .box1 {
             width: 400px;
+            font-size: 15px;
         }
 
         .icons {
@@ -444,34 +280,29 @@
 
         }
 
-        .icons a i {
-            font-size: 1em;
-            color: rgb(17, 0, 255);
+        .icons a {
+            font-size: 2em;
             opacity: 0.9;
+        }
+
+        .icons a i {
+            color: rgb(17, 0, 255);
         }
 
         .icons a j {
-            font-size: 1em;
             color: rgb(17, 159, 247);
-            opacity: 0.9;
         }
 
         .icons a k {
-            font-size: 1em;
             color: rgb(237, 0, 245);
-            opacity: 0.9;
         }
 
         .icons a l {
-            font-size: 1em;
             color: rgb(84, 84, 76);
-            opacity: 0.9;
         }
 
         .icons a n {
-            font-size: 1em;
             color: rgb(255, 0, 0);
-            opacity: 0.9;
         }
 
         .icons a:hover i {
@@ -486,11 +317,6 @@
 
         .icons a:hover k {
             color: rgb(234, 171, 245);
-            transition: 0.1s;
-        }
-
-        .icons a:hover l {
-            color: rgb(145, 146, 137);
             transition: 0.1s;
         }
 
@@ -509,13 +335,14 @@
         }
 
         .student {
-            width: 250px;
+            width: 300px;
             color: white;
             background-color: rgba(31, 15, 109, 0.823);
             padding: 5px;
             border: 3px solid rgba(12, 6, 65, 0.871);
             box-shadow: 4px 4px 2px rgba(101, 105, 168, 0.871);
             line-height: 1.5;
+            font-size: 20px;
         }
 
         .student h3 {
@@ -546,13 +373,11 @@
             color: rgb(255, 255, 255);
             margin: 20px;
             text-decoration: none;
-            font-size: 1em;
             opacity: 100%;
 
         }
 
         .footerNav ul li a:hover {
-            /* opacity: 0.3; */
             transition: 0.1s;
             color: rgba(250, 218, 10, 0.816);
             text-decoration: underline;
@@ -566,6 +391,7 @@
             opacity: 70%;
             display: flex;
             gap: 750px;
+            width: 100%;
         }
 
         .designer {
@@ -596,20 +422,19 @@
 </head>
 
 <body>
-
     <nav>
         <a href="D1_home.html"><img src="Dharohar_logo_cropped-removebg-preview.png" alt="Dharohar Logo"></a>
         <div class="nav-bar">
-            <a href="D_home.html">Home</a>
-            <a href="#about_us">About Us</a>
-            <a href="schedule.html" target="_blank">Schedule '24</a>
+            <a href="D_home.html" target="_blank">Home</a>
+            <a href="D_home.html#about_us" target="_blank">About Us</a>
+            <a href="schedule.html">Schedule '24</a>
             <a href="tickets.html" target="_blank">Get Tickets</a>
         </div>
         <div class="dropdown" style="float: right;">
-            <button class="dropbtn">=</button>
+            <button class="dropbtn" style="font-size: larger;">=</button>
             <div class="dropdown-content">
-                <a href="gallery.html">Picture Gallery</a>
-                <a href="#sponsor">Our Sponsors</a>
+                <a href="gallery.html" target="_blank">Picture Gallery</a>
+                <a href="D_home.html#sponsor" target="_blank">Our Sponsors</a>
                 <a href="refund_policy.html" target="_blank">Refund Policy</a>
                 <a href="D_faq.html" target="_blank">FAQs</a>
                 <a href="contact-us.html" target="_blank">Contact Us</a>
@@ -617,182 +442,52 @@
         </div>
     </nav>
 
-    <div id="home-section">
-        <div class="hover-text">ध &nbsp;&nbsp;रो &nbsp;&nbsp;ह &nbsp;&nbsp;र<br></div>
-        <div class="waviy">
-            <span style="--i:1">U</span>
-            <span style="--i:2">n</span>
-            <span style="--i:3">i</span>
-            <span style="--i:4">t</span>
-            <span style="--i:5">e</span>
-            <span style="--i:6">, </span>
-            <span style="--i:7">C</span>
-            <span style="--i:8">e</span>
-            <span style="--i:9">l</span>
-            <span style="--i:10">e</span>
-            <span style="--i:11">b</span>
-            <span style="--i:12">r</span>
-            <span style="--i:13">a</span>
-            <span style="--i:14">t</span>
-            <span style="--i:15">e</span>
-            <span style="--i:16">, </span>
-            <span style="--i:17">C</span>
-            <span style="--i:18">r</span>
-            <span style="--i:19">e</span>
-            <span style="--i:20">a</span>
-            <span style="--i:21">t</span>
-            <span style="--i:22">e</span>
-
-        </div>
-
-        <div class="wave"></div>
-        <div class="wave"></div>
-        <div class="wave"></div>
-
-    </div>
-
-    <article id="about_us">
-        <div>
-            <h1>IT'S GO TIME! WELCOME TO <span class="gold">धरोहर 2024!</span> </h1>
-        </div>
-
-        <div class="para">
-            <div class="image">
-                <img src="Dharohar logo cropped.jpg" alt="Dharohar Logo" width="350px" height="250px">
-            </div>
-            <div>
-                <p>
-                    <b>Dharohar</b> is an exciting three-day festival at ABES Engineering College, celebrating
-                    culture, creativity, and
-                    innovation. Organized by students, it blends technical skills with artistic expression,
-                    attracting participants from
-                    across the country for a memorable experience.
-                </p>
-            </div>
-        </div>
-
-
-        <div class="para">
-            <div>
-                <p>The festival features thrilling attractions like a Ferris wheel and roller coaster, alongside
-                    interactive games and
-                    competitions. A celebrity guest adds extra excitement, while sponsors provide prizes and
-                    goodies, ensuring plenty of fun
-                    for all attendees.
-
-                </p>
-            </div>
-            <div class="image">
-                <img src="Ferris wheel.jpg" alt="Picture of a Ferris wheel" width="350px" height="250px">
-            </div>
-        </div>
-
-        <div class="para">
-            <div class="image">
-                <img src="performance.jpg" alt="Crowd enjoying a performance" width="350px" height="250px">
-            </div>
-            <div>
-                <p>At its core, <b>Dharohar</b> showcases vibrant cultural performances, including dance, music,
-                    and DJ acts. It's a platform for students to showcase their talents, connect with peers, and
-                    celebrate the spirit of student life.
-                </p>
-            </div>
-        </div>
-
-        <div class="para">
-            <div>
-                <p>The dance performance at Dharohar, a vibrant cultural fest, blends traditional and
-                    contemporary styles with energetic choreography, colorful costumes, and rhythmic music,
-                    captivating the audience with its artistry and passion.</p>
-            </div>
-            <div class="image">
-                <img src="Dance.jpeg" alt="People enjoying dance performance" width="350px" height="250px">
-            </div>
-        </div>
-
-
-        <div class="para">
-            <div class="image">
-                <img src="Magic show.jpg" alt="magician peforming captivating magic" width="350px" height="250px">
-            </div>
-            <div>
-                <p>The magic show at Dharohar enchants audiences with mind-bending illusions and mesmerizing
-                    tricks. Skilled magicians deliver awe-inspiring performances, blending mystery and
-                    entertainment seamlessly. Enhanced by stunning visuals and surprise elements, the show
-                    leaves spectators in awe, evoking wonder and amazement from start to finish.</p>
-            </div>
-        </div>
-
-        <div class="para">
-            <div>
-                <p>The music show at Dharohar showcases soulful performances spanning genres from classical to
-                    contemporary. Talented musicians craft an enchanting atmosphere with melodic rhythms,
-                    celebrating diverse musical traditions and leaving the audience captivated by the magic of
-                    sound.</p>
-            </div>
-            <div class="image">
-                <img src="Singing.jpg" alt="band performing" width="350px" height="250px">
-            </div>
-        </div>
-
-        <div class="para">
-            <div class="image">
-                <img src="Workshop.jpg" alt="people buying handmade Indian handicrafts" width="350px" height="250px">
-            </div>
-            <div>
-                <p>The handicraft workshops at Dharohar provide hands-on experiences in traditional crafts,
-                    including pottery, weaving, and painting. Guided by skilled artisans, participants celebrate
-                    creativity and craftsmanship, crafting unique pieces while immersing themselves in cultural
-                    heritage.</p>
-            </div>
-        </div>
-    </article>
-    <div id="sponsor">
-        <h1 class="sponhead"> THANKS TO OUR SPONSORS</h1>
-        <div class="logos">
-            <div class="slidelogo">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/9/94/Boat_Logo.webp" alt="">
-            </div>
-
-            <div class="slidelogo">
-                <img src="https://www.logo.wine/a/logo/Spotify/Spotify-Logo.wine.svg" alt="">
-            </div>
-            <div class="slidelogo">
-                <img src="https://seeklogo.com/images/T/thums-up-logo-CA8D303AB3-seeklogo.com.png" width="120px" alt="">
-            </div>
-            <div class="slidelogo">
-                <img src="https://logos-world.net/wp-content/uploads/2020/11/Zomato-Logo.png" alt="">
-            </div>
-
-            <div class="slidelogo">
-                <img src="https://download.logo.wine/logo/Paytm/Paytm-Logo.wine.png" alt="">
-            </div>
-            <div class="slidelogo">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/0/03/Hostinger_Logo.png" alt="">
-            </div>
-            <!-- duplicating them again -->
-            <div class="slidelogo">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/9/94/Boat_Logo.webp" alt="">
-            </div>
-
-            <div class="slidelogo">
-                <img src="https://www.logo.wine/a/logo/Spotify/Spotify-Logo.wine.svg" alt="">
-            </div>
-            <div class="slidelogo">
-                <img src="https://seeklogo.com/images/T/thums-up-logo-CA8D303AB3-seeklogo.com.png" width="120px" alt="">
-            </div>
-            <div class="slidelogo">
-                <img src="https://logos-world.net/wp-content/uploads/2020/11/Zomato-Logo.png" alt="">
-            </div>
-
-            <div class="slidelogo">
-                <img src="https://download.logo.wine/logo/Paytm/Paytm-Logo.wine.png" alt="">
-            </div>
-            <div class="slidelogo">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/0/03/Hostinger_Logo.png" alt="">
-            </div>
+    <div class="main-content">
+        <div class="container">
+            <header>
+                <h1>Contact Us</h1>
+            </header>
+            <form action="submit_form.php" method="POST">
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject" required placeholder="Enter subject">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required placeholder="Write your message"></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="submit-btn" onclick="validate_email()">Submit</button>
+                </div>
+            </form>
         </div>
     </div>
+
+    <script>
+        function validate_email() {
+            var mailInput = document.getElementById('email').value;
+            var mailformat = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/;
+            if (!mailInput.match(mailformat)) {
+
+                alert("Please Enter Correct E-mail Id ");
+
+            }
+            else {
+
+                alert('Successfully submitted.');
+
+            }
+        }
+    </script>
+
 
     <footer>
         <div class="cont">
@@ -807,6 +502,7 @@
                     <a href="">
                         <k class="fa-brands fa-instagram"></k>
                     </a>
+
                     <a href="">
                         <n class="fa-brands fa-youtube"></n>
                     </a>
@@ -814,9 +510,9 @@
 
                 <div class="footerNav">
                     <ul>
-                        <li><a href="D_home.html">Home</a></li>
-                        <li><a href="#about_us">About</a></li>
-                        <li><a href="contact-us.html">Contact Us</a></li>
+                        <li><a href="D_home.html" target="_blank">Home</a></li>
+                        <li><a href="D_home.html#about_us" target="_blank">About</a></li>
+                        <li><a href="contact-us.html" target="_blank">Contact Us</a></li>
                     </ul>
 
                 </div>
@@ -825,22 +521,12 @@
             <div class="box2">
                 <div class="student">
                     <h3>EVENT COORDINATOR</h3>
-                    <div class="name">Ashish Jaiswal</div>
-                    <div class="email">
-                        <a href="mailto:ashishjaiswal@gmail.com"><i class="fa fa-envelope"></i>
-                            ashishjaiswal@gmail.com</a> <br>
-                    </div>
-                    <div class="mobile"><a href="tel:+91630606098123"><i class="fa fa-phone"></i>+916306098123</a></div>
-                </div>
-
-                <div class="student">
-                    <h3>EVENT COORDINATOR</h3>
                     <div class="name">Lavish Patel</div>
                     <div class="email">
                         <a href="mailto:lavishpatel@gmail.com"><i class="fa fa-envelope"></i>
                             lavishpatel@gmail.com</a> <br>
                     </div>
-                    <div class="mobile"><a href="tel:+916307967123"><i class="fa fa-phone"></i>+916307967123</a></div>
+                    <div class="mobile"><a href="tel:+916307967770"><i class="fa fa-phone"></i>+91630796xxx</a></div>
                 </div>
 
                 <div class="student">
@@ -848,9 +534,9 @@
                     <div class="name">Udisha Verma</div>
                     <div class="email">
                         <a href="mailto:udishaverma2@gmail.com"><i class="fa fa-envelope"></i>
-                            udishaverma@gmail.com</a> <br>
+                            udishaverma2@gmail.com</a> <br>
                     </div>
-                    <div class="mobile"><a href="tel:+918287465123"><i class="fa fa-phone"></i>+918287465123</a></div>
+                    <div class="mobile"><a href="tel:+918287465191"><i class="fa fa-phone"></i>+91828746xxx</a></div>
                 </div>
 
                 <div class="student">
@@ -860,7 +546,7 @@
                         <a href="mailto:vidushisrivastava@gmail.com"><i class="fa fa-envelope"></i>
                             vidushisrivastava@gmail.com</a> <br>
                     </div>
-                    <div class="mobile"><a href="tel:+918800147123"><i class="fa fa-phone"></i>+918800147123</a></div>
+                    <div class="mobile"><a href="tel:+918800147574"><i class="fa fa-phone"></i>+91880014xxx</a></div>
                 </div>
             </div>
         </div>
@@ -873,7 +559,6 @@
             </div>
         </div>
     </footer>
-
 </body>
 
 </html>
